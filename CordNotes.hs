@@ -1,3 +1,4 @@
+module Music.Theory(getCordNotes) where
 
 import Data.List(isPrefixOf, findIndex, maximumBy)
 import Data.Maybe(fromJust)
