@@ -1,4 +1,4 @@
-module Music.Theory.Internal.ChordNotes(getChordNotes) where
+module Music.Theory.Internal.Chord where
 
 import Music.Theory.Internal.Common
 
@@ -28,12 +28,3 @@ getRootNote chordName = maximumBy (compare `on` length) $ filter (\note -> isPre
 getSymbol :: String -> String
 getSymbol chordName = drop rootLen chordName
     where rootLen = (length . getRootNote) chordName
-
-getChordNotes :: String -> [[String]]
-getChordNotes chordName = do
-    let
-        root = getRootNote chordName
-        symbol = getSymbol chordName
-        chromatic = getChromaticFrom root
-        intervals = getIntervals symbol symbolIntervalsTable
-    map (\n -> chromatic !! n) intervals
