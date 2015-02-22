@@ -1,6 +1,7 @@
 module Music.Theory.Internal.Chord where
 
-import Music.Theory.Internal.Common
+import Music.Theory.Internal.Notes
+import Music.Theory.Internal.Intervals
 
 import Data.List(isPrefixOf, maximumBy)
 import Data.Function (on)
@@ -25,6 +26,6 @@ symbolIntervalsTable = [
 getRootNote :: String -> String
 getRootNote chordName = maximumBy (compare `on` length) $ filter (\note -> isPrefixOf note chordName) allNotes
 
-getSymbol :: String -> String
-getSymbol chordName = drop rootLen chordName
+getChordSymbol :: String -> String
+getChordSymbol chordName = drop rootLen chordName
     where rootLen = (length . getRootNote) chordName

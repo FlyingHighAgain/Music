@@ -1,6 +1,8 @@
 module Music.Theory.Internal.ScaleNotes(getScaleNotes) where
 
-import Music.Theory.Internal.Common
+import Music.Theory.Internal.Notes
+import Music.Theory.Internal.Intervals
+
 
 scaleIntervalsTable = [
     NamedIntervals "major" [0, 2, 4, 5, 7, 9, 11],
