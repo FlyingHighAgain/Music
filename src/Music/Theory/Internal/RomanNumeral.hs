@@ -2,6 +2,7 @@
 module Music.Theory.Internal.RomanNumeral where
 
 import Music.Theory.Internal.Notes
+import Music.Theory.Internal.Scale
 import Music.Theory.Internal.Degree
 import Music.Theory.Internal.Chord
 import Music.Theory.Internal.RomanNumeralChord
@@ -10,7 +11,7 @@ import Data.String.Utils(replace, split, splitWs)
 import Data.List(nub, sortBy)
 import Data.Function(on)
 
-toRomanNumeralChord :: String -> String -> String
+toRomanNumeralChord :: Note -> String -> String
 toRomanNumeralChord root chord = degree ++ symbol
   where
     chordRoot = getRootNote chord
@@ -25,7 +26,7 @@ fromRomanNumeralChord key romanNumeralChord = chordRoot ++ symbol
   	keyNote   = getRootNote key
   	rootNote  = fromDegree keyNote degree
   	isSharp   = isSharpScale key
-  	chordRoot = if isSharp then head rootNote else last rootNote
+  	chordRoot = show $ if isSharp then sharpNote rootNote else flatNote rootNote
 
 removeBars :: String -> String
 removeBars = replace "|" " "

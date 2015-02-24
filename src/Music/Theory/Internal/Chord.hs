@@ -23,9 +23,12 @@ symbolIntervalsTable = [
     NamedIntervals "11"    [0, 4, 7, 10, 14, 17],
     NamedIntervals "13"    [0, 4, 7, 10, 14, 17, 21]]
 
-getRootNote :: String -> String
-getRootNote chordName = maximumBy (compare `on` length) $ filter (\note -> isPrefixOf note chordName) allNotes
+getRootNoteString :: String -> String
+getRootNoteString chordName = maximumBy (compare `on` length) $ filter (\note -> isPrefixOf note chordName) allNotesSig
+
+getRootNote :: String -> Note
+getRootNote chordName = (readNote . getRootNoteString) chordName
 
 getChordSymbol :: String -> String
 getChordSymbol chordName = drop rootLen chordName
-    where rootLen = (length . getRootNote) chordName
+    where rootLen = (length . getRootNoteString) chordName

@@ -12,7 +12,7 @@ degrees = ["I", "bII", "II", "bIII", "III", "IV", "bV", "V", "bVI", "VI", "bVII"
 getDegreeIndex :: String -> Int
 getDegreeIndex degree = (fromJust . elemIndex degree) degrees
 
-toDegree :: String -> String -> String
+toDegree :: Note -> Note -> String
 toDegree rootNote targetNote = degrees !! degreeIndex
   where
     rootIndex   = getNoteIndex rootNote
@@ -20,6 +20,7 @@ toDegree rootNote targetNote = degrees !! degreeIndex
     degreeIndex = (targetIndex - rootIndex) `mod` (length degrees)
 
 
+fromDegree :: Note -> String -> Note
 fromDegree rootNote degree = chromatic !! degreeIndex
   where
   	degreeIndex = getDegreeIndex degree
