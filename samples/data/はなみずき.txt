@@ -1,0 +1,30 @@
+%TITLE="はなみずき"
+%ARTIST="一青窈"
+%XSCALE="1"
+%STAFF="ON"
+%KEY="E"
+
+[Intro]
+| E  B/D# | C#m7  Bsus4 | A  E/G#  F#m B |  E       |          |
+
+[A]
+| <S> E  B/D# | C#m7  B6 | A  E/G# | F#m A/B |
+| E  B/D# | C#m7  B6 | A  E/G#  F#m B |  E    |
+
+[B]
+| E/G# A  | B:4.  C#m:8~ C#m:2  | E/G# A  | B:4.  E:8~ E:4  A/B:4 |
+
+[C]
+| E:2  D#m7-5:4 G#7:4 | C#m7:2  Bm7:4 E7:4 | A  E/G# | F#m7 A/B |
+| E:2  D#m7-5:4 G#7:4 | C#m7:2  Bm7:4 E7:4 | A  E/G# | F#m7 A/B <to Coda> |
+| E     <D.S.>  |
+
+[CB]
+| <Coda> A E/G# | F#m7:4. A/B:8~ A/B:2 |
+[M(Strings Solo))]
+| E  B/D# | C#m7  B6 | A  E/G# | F#m A/B |
+| E  B/D# | C#m7  B6 | A  E/G#  F#m B |  E    |
+
+[A2(静か. Piano + Strings)]
+| E  B/D# | C#m7  B6 | A  E/G# | F#m A/B |
+| E  B/D# | C#m7  B6 | A  E/G#  F#m B |  E    |

@@ -32,7 +32,7 @@ removeBars :: String -> String
 removeBars = replace "|" " "
 
 splitChordElements :: String -> [String]
-splitChordElements = concat . map (split "on") . splitWs . removeBars
+splitChordElements = concat . map (split "/") . concat . map (split "on") . splitWs . removeBars
 
 getChordElements :: String -> [String]
 getChordElements = nub . splitChordElements

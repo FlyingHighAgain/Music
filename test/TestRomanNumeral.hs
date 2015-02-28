@@ -21,6 +21,10 @@ main = hspec $ do
             toRomanNumeral
                "Bb" "|Bb FonA|Eb Bb BbonA|Gm Dm7|Eb Fsus4|" `shouldBe` "|I VonVII|IV I IonVII|VIm IIIm7|IV Vsus4|"
 
+        it "returns roman numeral chord progression #4" $ do
+            toRomanNumeral
+               "Bb" "|Bb F/A|Eb Bb Bb/A|Gm Dm7|Eb Fsus4|" `shouldBe` "|I V/VII|IV I I/VII|VIm IIIm7|IV Vsus4|"
+
 
 --        it "throws an exception if unrecognized scale" $ do
 --            evaluate (toRomanNumeral "Xm" "|G|Am|Bm|C|") `shouldThrow` anyException
@@ -40,6 +44,9 @@ main = hspec $ do
             fromRomanNumeral
                "Bb" "|I VonVII|IV I IonVII|VIm IIIm7|IV Vsus4|" `shouldBe` "|Bb FonA|Eb Bb BbonA|Gm Dm7|Eb Fsus4|"
 
+        it "returns chord progression from roman numeral progression #4" $ do
+            fromRomanNumeral
+               "Bb" "|I V/VII|IV I I/VII|VIm IIIm7|IV Vsus4|" `shouldBe` "|Bb F/A|Eb Bb Bb/A|Gm Dm7|Eb Fsus4|"
 
 
 
