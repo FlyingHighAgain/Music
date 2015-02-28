@@ -62,13 +62,12 @@ instance Show Note where
 
 instance Read Note where
   readsPrec _ value = [(note, rest)]
-  	where
+    where
       allNotes' = map show allNotes
       eaten = maximumBy (compare `on` length) $ filter (\note -> isPrefixOf note value) allNotes'
       rest  = drop (length eaten) value
       pairList = map (\n -> (show n, n)) allNotes
       note = fromJust $ lookup eaten pairList
-
 
 
 getChromaticFrom :: Note -> [Note]
@@ -77,21 +76,21 @@ getChromaticFrom note = [note .. ]
 readNote :: String -> Note
 readNote s = (read s) :: Note
 
-flatNote :: Note -> Note
-flatNote Cs = Df
-flatNote Ds = Ef
-flatNote Fs = Gf
-flatNote Gs = Af
-flatNote As = Bf
-flatNote n  = n
+toFlatNote :: Note -> Note
+toFlatNote Cs = Df
+toFlatNote Ds = Ef
+toFlatNote Fs = Gf
+toFlatNote Gs = Af
+toFlatNote As = Bf
+toFlatNote n  = n
 
-sharpNote :: Note -> Note
-sharpNote Df = Cs
-sharpNote Ef = Ds
-sharpNote Gf = Fs
-sharpNote Af = Gs
-sharpNote Bf = As
-sharpNote n  = n
+toSharpNote :: Note -> Note
+toSharpNote Df = Cs
+toSharpNote Ef = Ds
+toSharpNote Gf = Fs
+toSharpNote Af = Gs
+toSharpNote Bf = As
+toSharpNote n  = n
 
 
 

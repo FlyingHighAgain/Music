@@ -26,7 +26,7 @@ fromRomanNumeralChord key romanNumeralChord = chordRoot ++ symbol
   	keyNote   = getRootNote key
   	rootNote  = fromDegree keyNote degree
   	isSharp   = isSharpScale key
-  	chordRoot = show $ if isSharp then sharpNote rootNote else flatNote rootNote
+  	chordRoot = show $ if isSharp then toSharpNote rootNote else toFlatNote rootNote
 
 removeBars :: String -> String
 removeBars = replace "|" " "
