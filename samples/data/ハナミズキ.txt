@@ -1,4 +1,4 @@
-%TITLE="はなみずき"
+%TITLE="ハナミズキ"
 %ARTIST="一青窈"
 %XSCALE="1"
 %STAFF="ON"

@@ -3,19 +3,22 @@ module Music.Format.LeadSheet(
     filterProgression
     ) where
 
+import Music.Theory(Key, toKey)
+
 import Data.String.Utils(startswith, replace)
 import Text.Regex(mkRegex, subRegex)
 
 getInfoLine :: String -> String -> String
 getInfoLine key contents = head $ filter (startswith ('%':key)) $ lines contents
 
-getMusicKey :: String -> String
-getMusicKey contents = value
+getMusicKey :: String -> Key
+getMusicKey contents = key
   where
     infoKey = "KEY"
     keyLine = getInfoLine infoKey contents
     value'  = subRegex (mkRegex ('%':infoKey ++ "[[:space:]]*=[[:space:]]*")) keyLine ""
-    value   = replace "\"" "" value'
+    value'' = replace "\"" "" value'
+    key     = toKey value''
 
 filterProgression :: String -> String
 filterProgression = unlines . filterChordProgression . lines
