@@ -1,0 +1,24 @@
+%TITLE="YELL"
+%ARTIST="いきものがかり"
+%KEY="Dm"
+
+[Intro]
+| Dm Am/C | Bb F/A | Gm7 Bb | A7sus4 A |
+| Dm Am/C | Bb F/A | Gm7 Bb | A7sus4 A |          |
+
+[A]
+| Dm Am/C | Bb F/A | Gm7 F | Gm7 A |
+| Dm Am/C | Bb F/A | Gm7 F | Gm7 A Dm |
+
+[B]
+| BbM7    | F/A    | Gm7 A  | Dm Dm/C |
+| BbM7    | F/A    | Gm7 Am | Bb      | A7sus4    | A7      |
+
+[C]
+| Dm  Gm7 | C  F C/E | Dm Gm7 | C  A7sus4 A/C# |
+| Dm  Bb  | C  F C/E | Dm Gm7 | C  A/C#  |
+
+[D]
+| Dm Am/C | Bb F/A | Gm7 Bb | A7sus4 A |
+
+
